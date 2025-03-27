@@ -30,7 +30,7 @@ const products = [
     {
       id: 5,
       title: "Torta de Morango",
-      description: "Torta com cobertura de morango",
+      description: "Torta com morango",
       price: "R$ 40",
       image: "https://www.receiteria.com.br/wp-content/uploads/torta-de-morango.jpg"
     },

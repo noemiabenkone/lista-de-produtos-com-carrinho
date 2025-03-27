@@ -1,4 +1,3 @@
-
 import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 
@@ -24,7 +23,7 @@ export default function Card({title, description, price,image }: CardProps)  {
             />
             <button className="bg-white flex items-center gap-2 absolute py-1 px-3 -bottom-5 border border-amber-950 rounded-full text-amber-950">
                 <ShoppingCart className="" />
-                 ao carrinho
+                 Add ao carrinho
             </button>
        </div>
        <div className="mt-6">
