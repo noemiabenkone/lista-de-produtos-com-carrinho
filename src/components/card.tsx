@@ -1,3 +1,4 @@
+import { IProduct } from "@/types/product";
 import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 
@@ -7,9 +8,13 @@ interface CardProps {
     description: string;
     price: string;
     image: string;
+    addToCart: (product: IProduct) => void;
     
 }
-export default function Card({title, description, price,image }: CardProps)  {
+export default function Card({title, description, price,image, }: CardProps)  {
+    const addToCart= (product: IProduct) => {
+        console.log(product);
+    }
     
   return (
 
@@ -21,7 +26,7 @@ export default function Card({title, description, price,image }: CardProps)  {
                 fill 
                 className="rounded-lg object-cover"
             />
-            <button className="bg-white flex items-center gap-2 absolute py-1 px-3 -bottom-5 border border-amber-950 rounded-full text-amber-950">
+            <button onClick={() => addToCart} className="bg-white flex items-center gap-2 absolute py-1 px-3 -bottom-5 border border-amber-950 rounded-full text-amber-950">
                 <ShoppingCart className="" />
                  Add ao carrinho
             </button>
