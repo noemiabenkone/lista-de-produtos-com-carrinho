@@ -10,7 +10,7 @@ export default function Home() {
   const [cartItems, setCartItems] = useState<IProduct[]>([]);
  
 
-  const addToCart = (product: IProduct) => {
+  const handleAddToCart = (product: IProduct) => {
     setCartItems((prevItems) => [...prevItems, product]);
   };
   return (
@@ -22,11 +22,8 @@ export default function Home() {
           {products.map((product) => (
             <Card
               key={product.id}
-              title={product.title}
-              description={product.description}
-              price={product.price}
-              image={product.image}
-              addToCart={addToCart}
+              product={product}
+              addToCart={() => handleAddToCart(product)}
             />
           ))}
         </div>
